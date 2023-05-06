@@ -210,22 +210,20 @@
             var גודל = document.getElementsByName("גודל");
             var תוספת = document.getElementsByName("תוספת");
             var סוג_בצק = document.getElementsByName("סוג_בצק");
-            var x;
-            var y = 0;
-            var z;
+            var x = 0;
             var isTrue1 = false;
             var isTrue2 = false;
 
             for (i = 0; i < גודל.length; i++) {
               if (גודל[i].checked) {
-                x = גודל[i].value;
+                x += parseFloat(גודל[i].value);
                 isTrue1 = true;
               }
             }
 
             for (i = 0; i < תוספת.length; i++) {
               if (תוספת[i].checked) {
-                y += Number(תוספת[i].value);
+                x += parseFloat(תוספת[i].value);
               }
             }
 
@@ -236,8 +234,7 @@
             }
 
             if (isTrue1 && isTrue2) {
-              z = Number(x) + y;
-              alert(z);
+              alert(x);
             } else if (isTrue1 && !isTrue2) {
               alert("אתה חייב לבחור סוג בצק");
             } else if (!isTrue1 && isTrue2) {
