@@ -34,7 +34,7 @@
     .pizza-selection-window {
       background-color: #504b4b;
       color: aliceblue;
-      font-family: "Ariel";
+      font-family: cursive;
       text-align: end;
       border: 1px solid #f7f1f1;
       border-radius: 20px;
@@ -170,36 +170,36 @@
     </h1>
     <div class="pizza-selection-window">
       <div class="תוספות">
-        <h3>:בחר את הפיצה שלך</h3>
-        <h3>:סוג בצק</h3>
+        <h3>Order your own Pizza:</h3>
+        <h3>Choose a dough type:</h3>
         <input type="radio" id="רגיל" name="סוג_בצק" value="0" />
-        <label for="רגיל">רגיל</label><br />
-        <input type="radio" id="מלא" name="סוג_בצק" value="0" />
-        <label for="מלא">מלא</label><br />
+        <label for="רגיל">Plain dough (0)</label><br />
+        <input type="radio" id="מלא" name="סוג_בצק" value="5" />
+        <label for="מלא">Full dough (5)</label><br />
         <input type="radio" id="דק" name="סוג_בצק" value="0" />
-        <label for="דק">דק</label><br />
+        <label for="דק">thin crust (0)</label><br />
 
-        <h3>:גודל הפיצה</h3>
+        <h3>Choose a Pizza size:</h3>
         <input type="radio" id="אישית" name="גודל" value="15" />
-        <label for="אישית">אישית</label><br />
+        <label for="אישית">Personal size (20)</label><br />
         <input type="radio" id="'לארג" name="גודל" value="20" />
-        <label for="'לארג">'לארג</label><br />
+        <label for="'לארג">Large size (25)</label><br />
         <input type="radio" id="'אקסטה לארג" name="גודל" value="25" />
-        <label for="'אקסטה לארג">'אקסטה לארג</label><br />
+        <label for="'אקסטה לארג">Extra large size (32)</label><br />
 
-        <h3>:תוספות</h3>
-        <input type="checkbox" id="אנשובי" name="תוספת" value="1" />
-        <label for="אנשובי">אנשובי</label><br />
+        <h3>Pizza toppings:</h3>
+        <input type="checkbox" id="אנשובי" name="תוספת" value="2" />
+        <label for="אנשובי">Anchovy (2)</label><br />
         <input type="checkbox" id="עגבניות" name="תוספת" value="2" />
-        <label for="עגבניות">עגבניות</label><br />
-        <input type="checkbox" id="פיטריות" name="תוספת" value="3" />
-        <label for="פיטריות">פיטריות</label><br />
-        <input type="checkbox" id="בצל" name="תוספת" value="4" />
-        <label for="בצל">בצל</label><br />
-        <input type="checkbox" id="בולגרית" name="תוספת" value="5" />
-        <label for="בולגרית">בולגרית</label><br />
-        <input type="checkbox" id="אננס" name="תוספת" value="6" />
-        <label for="אננס">אננס</label><br />
+        <label for="עגבניות">Tomatoes (2)</label><br />
+        <input type="checkbox" id="פיטריות" name="תוספת" value="2" />
+        <label for="פיטריות">Mushrooms (2)</label><br />
+        <input type="checkbox" id="בצל" name="תוספת" value="2" />
+        <label for="בצל">Onion (2)</label><br />
+        <input type="checkbox" id="בולגרית" name="תוספת" value="2" />
+        <label for="בולגרית">Bulgarian cheese (2)</label><br />
+        <input type="checkbox" id="אננס" name="תוספת" value="2" />
+        <label for="אננס">Pineapple (2)</label><br />
         <div class="buttons_container">
           <button class="submit_button" onclick="getPrice()">SUBMIT</button>
           <button class="reset_button" onclick="resetBoxes()">RESET</button>
