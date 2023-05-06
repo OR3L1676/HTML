@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      /*
+    אני משתמש ברקע האתר בתור התמונה של הפיצה 
+  */
+      background-image: url("/images/pizza-time-tasty-homemade-traditional-pizza-italian-recipe.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    .pizzeria_name {
+      text-align: right;
+      margin-right: 20px;
+      font-family: "Segoe UI", "Ariel";
+      font-size: 50px;
+      color: white;
+      margin-bottom: 150px;
+      text-shadow: 2px 0 20px#ccc;
+    }
+    .text_margarita_efect {
+      color: red;
+      font-style: italic;
+      font-size: 60px;
+    }
+    .pizza-selection-window {
+      background-color: #504b4b;
+      color: aliceblue;
+      font-family: "Ariel";
+      text-align: end;
+      border: 1px solid #f7f1f1;
+      border-radius: 20px;
+      width: 500px;
+      position: absolute;
+      right: 20px;
+      box-shadow: 10px 0px 10px 10px rgba(255, 0, 0, 0.6);
+    }
+    .תוספות {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(97, 97, 97);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .תוספות h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .תוספות input[type="radio"],
+    .תוספות input[type="checkbox"] {
+      display: none;
+    }
+
+    .תוספות label {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 1px;
+      font-size: 16px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .תוספות label:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #555;
+      background-color: #fff;
+    }
+
+    .תוספות input[type="radio"] + label:before {
+      border-radius: 50%;
+    }
+
+    .תוספות input[type="checkbox"] + label:before {
+      border-radius: 5px;
+    }
+
+    .תוספות input[type="radio"]:checked + label:before,
+    .תוספות input[type="checkbox"]:checked + label:before {
+      border-color: #800000;
+      background-color: #ff0000;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    .submit_button {
+      background-color: rgb(226, 12, 12);
+      color: rgb(255, 255, 255);
+      border-color: rgb(247, 247, 247);
+      border-radius: 20px;
+      border-style: solid;
+      border-width: 1px;
+      padding-left: 15px;
+      padding-top: 7px;
+      padding-right: 15px;
+      padding-bottom: 7px;
+      font-size: 15px;
+
+      cursor: pointer;
+      transition: background-color 0.5s, color 0.5s;
+      transition: box-shadow 0.15s;
+    }
+    .submit_button:hover {
+      background-color: rgb(223, 30, 30);
+      color: white;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+    .reset_button:active {
+      opacity: 0.7;
+    }
+    .submit_button,
+    .reset_button {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .reset_button {
+      background-color: rgb(226, 12, 12);
+      color: rgb(255, 255, 255);
+      border-color: rgb(247, 247, 247);
+      border-radius: 20px;
+      border-style: solid;
+      border-width: 1px;
+      padding-left: 15px;
+      padding-top: 7px;
+      padding-right: 15px;
+      padding-bottom: 7px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.5s, color 0.5s;
+      transition: box-shadow 0.15s;
+    }
+    .reset_button:hover {
+      background-color: rgb(223, 30, 30);
+      color: white;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+    .reset_button:active {
+      opacity: 0.7;
+    }
+  </style>
+  <body>
+    <h1 class="pizzeria_name">
+      Pizza <span class="text_margarita_efect">Margherita</span>
+    </h1>
+    <div class="pizza-selection-window">
+      <div class="תוספות">
+        <h3>:בחר את הפיצה שלך</h3>
+        <h3>:סוג בצק</h3>
+        <input type="radio" id="רגיל" name="סוג_בצק" value="0" />
+        <label for="רגיל">רגיל</label><br />
+        <input type="radio" id="מלא" name="סוג_בצק" value="0" />
+        <label for="מלא">מלא</label><br />
+        <input type="radio" id="דק" name="סוג_בצק" value="0" />
+        <label for="דק">דק</label><br />
+
+        <h3>:גודל הפיצה</h3>
+        <input type="radio" id="אישית" name="גודל" value="15" />
+        <label for="אישית">אישית</label><br />
+        <input type="radio" id="'לארג" name="גודל" value="20" />
+        <label for="'לארג">'לארג</label><br />
+        <input type="radio" id="'אקסטה לארג" name="גודל" value="25" />
+        <label for="'אקסטה לארג">'אקסטה לארג</label><br />
+
+        <h3>:תוספות</h3>
+        <input type="checkbox" id="אנשובי" name="תוספת" value="1" />
+        <label for="אנשובי">אנשובי</label><br />
+        <input type="checkbox" id="עגבניות" name="תוספת" value="2" />
+        <label for="עגבניות">עגבניות</label><br />
+        <input type="checkbox" id="פיטריות" name="תוספת" value="3" />
+        <label for="פיטריות">פיטריות</label><br />
+        <input type="checkbox" id="בצל" name="תוספת" value="4" />
+        <label for="בצל">בצל</label><br />
+        <input type="checkbox" id="בולגרית" name="תוספת" value="5" />
+        <label for="בולגרית">בולגרית</label><br />
+        <input type="checkbox" id="אננס" name="תוספת" value="6" />
+        <label for="אננס">אננס</label><br />
+        <div class="buttons_container">
+          <button class="submit_button" onclick="getPrice()">SUBMIT</button>
+          <button class="reset_button" onclick="resetBoxes()">RESET</button>
+        </div>
+
+        <script>
+          function getPrice() {
+            var גודל = document.getElementsByName("גודל");
+            var תוספת = document.getElementsByName("תוספת");
+            var סוג_בצק = document.getElementsByName("סוג_בצק");
+            var x;
+            var y = 0;
+            var z;
+            var isTrue1 = false;
+            var isTrue2 = false;
+
+            for (i = 0; i < גודל.length; i++) {
+              if (גודל[i].checked) {
+                x = גודל[i].value;
+                isTrue1 = true;
+              }
+            }
+
+            for (i = 0; i < תוספת.length; i++) {
+              if (תוספת[i].checked) {
+                y += Number(תוספת[i].value);
+              }
+            }
+
+            for (i = 0; i < סוג_בצק.length; i++) {
+              if (סוג_בצק[i].checked) {
+                isTrue2 = true;
+              }
+            }
+
+            if (isTrue1 && isTrue2) {
+              z = Number(x) + y;
+              alert(z);
+            } else if (isTrue1 && !isTrue2) {
+              alert("אתה חייב לבחור סוג בצק");
+            } else if (!isTrue1 && isTrue2) {
+              alert("אתה חייב לבחור גודל פיצה");
+            } else {
+              alert("אתה חייב לבחור סוג בצק וגם גודל פיצה");
+            }
+          }
+        </script>
+        <script>
+          function resetBoxes() {
+            var גודל = document.getElementsByName("גודל");
+            var תוספת = document.getElementsByName("תוספת");
+            var סוג_בצק = document.getElementsByName("סוג_בצק");
+            for (var i = 0; i < סוג_בצק.length; i++) {
+              סוג_בצק[i].checked = false;
+            }
+            for (var i = 0; i < גודל.length; i++) {
+              גודל[i].checked = false;
+            }
+            for (var i = 0; i < תוספת.length; i++) {
+              תוספת[i].checked = false;
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
