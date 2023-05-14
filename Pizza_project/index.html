@@ -180,11 +180,11 @@
         <label for="דק">thin crust (0)</label><br />
 
         <h3>Choose a Pizza size:</h3>
-        <input type="radio" id="אישית" name="גודל" value="15" />
+        <input type="radio" id="אישית" name="גודל" value="20" />
         <label for="אישית">Personal size (20)</label><br />
-        <input type="radio" id="'לארג" name="גודל" value="20" />
+        <input type="radio" id="'לארג" name="גודל" value="25" />
         <label for="'לארג">Large size (25)</label><br />
-        <input type="radio" id="'אקסטה לארג" name="גודל" value="25" />
+        <input type="radio" id="'אקסטה לארג" name="גודל" value="32" />
         <label for="'אקסטה לארג">Extra large size (32)</label><br />
 
         <h3>Pizza toppings:</h3>
@@ -229,6 +229,7 @@
 
             for (i = 0; i < סוג_בצק.length; i++) {
               if (סוג_בצק[i].checked) {
+                x += parseFloat(סוג_בצק[i].value);
                 isTrue2 = true;
               }
             }
