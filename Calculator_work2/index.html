@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="header">Javascript Calculator</h1>
+    <hr class="hr0" />
+    <div class="calculator-box">
+      <div class="num1">
+        <label for="num_x">Value for X: </label>
+        <input type="text" id="num_x" placeholder="Enter a number" />
+      </div>
+      <div class="num2">
+        <label for="num_y">Value for Y: </label>
+        <input type="text" id="num_y" placeholder="Enter a number" />
+        <hr class="hr1" />
+      </div>
+      <div class="outputs">
+        <div class="sum">
+          <label for="operator1">sum X + Y: </label>
+          <input type="text" id="operator1" />
+        </div>
+        <div class="product">
+          <label for="operator2">product X * Y: </label>
+          <input type="text" id="operator2" />
+        </div>
+      </div>
+      <div>
+        <button class="button-calculate" type="submit" onclick="sumbit()">
+          Press to calculate
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

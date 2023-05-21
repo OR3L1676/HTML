@@ -1,0 +1,53 @@
+
+
+.header {
+    text-align: center;
+}
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator-box {
+  position:fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: bisque;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+  
+  .hr1 {
+    background-color: gray;
+    height: 1px;
+  }
+  .num1 {
+    margin-bottom: 10px;
+  }
+  .sum {
+    padding-bottom: 10px;
+  }
+  .product {
+    padding-bottom: 10px;
+  }
+  .button-calculate {
+    background-color: grey;
+    color: rgb(255, 255, 255);
+    border-color: rgb(247, 247, 247);
+  }
+  .button-calculate:hover {
+    cursor: pointer;
+  }
+  .outputs {
+    pointer-events: none;
+  }
